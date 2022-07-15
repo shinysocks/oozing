@@ -27,6 +27,7 @@ public class CatBehavior : MonoBehaviour
     public GameObject hitEffect;
 
     public GameObject UiObject;
+    public GameObject GameOverScreen;
 
     // Private variables
     float idleTime;
@@ -137,7 +138,6 @@ public class CatBehavior : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             TakeDamage(1);
-            Debug.Log("rah");
         }
     }
 
@@ -157,8 +157,16 @@ public class CatBehavior : MonoBehaviour
     {
         if (currentHealth == 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameOver();
         }
+
+
+    }
+
+    void GameOver()
+    {
+        Time.timeScale = .2f;
+        GameOverScreen.SetActive(true);
     }
 
 
