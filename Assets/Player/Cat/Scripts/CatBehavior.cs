@@ -18,31 +18,25 @@ public class CatBehavior : MonoBehaviour
 
     // Lists of Different Directions
     public List<Sprite> walkingAnimation;
+    public List<GameObject> screenGunks;
 
     // Other references
-    public HealthBar healthBar;
 
     public GameObject bullet;
 
     public GameObject hitEffect;
 
     public GameObject UiObject;
-    public GameObject GameOverScreen;
+    public int Gunkiness;
 
     // Private variables
-    float idleTime;
-    int currentHealth;
     Vector2 directionWithSpeed;
-    int maxHealth = 9;
 
 
 // Unity Functions==========================
     void Start()
     {
         UiObject.SetActive(false);
-
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
@@ -50,6 +44,7 @@ public class CatBehavior : MonoBehaviour
         DeathDetection();
         Animate();
         Rotate();
+        Gunkify();
     }
 
 
@@ -119,7 +114,7 @@ public class CatBehavior : MonoBehaviour
     {
         if (!(directionWithSpeed.x == 0 && directionWithSpeed.y == 0)) // actually moving? how does this work???
         {
-            float playTime = Time.time - idleTime;
+            float playTime = Time.time;
             int totalFrames = (int)(playTime * frameRate);
             int frame = totalFrames % walkingAnimation.Count; 
 
@@ -137,41 +132,59 @@ public class CatBehavior : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            TakeDamage(1);
+            Gunkiness += 1;
         }
     }
-
-
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-       
-        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 0.2f);
-
-        healthBar.SetHealth(currentHealth);
-    }
-
 
     void DeathDetection()
     {
-        if (currentHealth == 0)
+        if (Gunkiness > 5)
         {
             GameOver();
         }
-
-
     }
 
-    void GameOver()
+
+    public void GameOver()
     {
-        Time.timeScale = .2f;
-        GameOverScreen.SetActive(true);
+        SceneManager.LoadScene("End");
+        Time.timeScale = 1;
     }
 
 
     void OnTriggerExit(Collider other)
     {
         UiObject.SetActive(false);
+    }
+
+    void Gunkify()
+    {
+        //AllGunks.SetActive(false);
+        switch(Gunkiness) 
+        {
+        case 1:
+            screenGunks[0].SetActive(true);
+            break;
+        case 2:
+            screenGunks[1].SetActive(true);
+            //gunk_2.SetActive(true);
+            break;
+        case 3:
+            screenGunks[2].SetActive(true);
+            //gunk_3.SetActive(true);
+            break;
+        case 4:
+            screenGunks[3].SetActive(true);
+            //gunk_4.SetActive(true);
+            break;
+        case 5:
+            screenGunks[4].SetActive(true);
+            //gunk_5.SetActive(true);
+            break;
+        default:
+            screenGunks[0].SetActive(false);
+            //AllGunks.SetActive(false);
+            break;
+        }
     }
 }

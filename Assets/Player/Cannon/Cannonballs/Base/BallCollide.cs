@@ -29,14 +29,6 @@ public class BallCollide : MonoBehaviour
             Destroy(effect, 0.2f);
             Destroy(gameObject);
         }
-
-        if (multiShot == true)
-        {
-            multiShot = false;
-            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(transform.right * projectileSpeed, ForceMode2D.Impulse);
-        }
     }
 
 }
