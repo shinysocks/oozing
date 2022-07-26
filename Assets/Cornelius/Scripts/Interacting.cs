@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Interacting : MonoBehaviour
 {
+    public bool Inside = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class Interacting : MonoBehaviour
     {
         if (other.gameObject.tag == "Cat")
         {
-            Debug.Log("hi.");
+            Inside = true;
         }
         
     }
@@ -29,7 +30,7 @@ public class Interacting : MonoBehaviour
     {
         if (other.gameObject.tag == "Cat")
         {
-            Debug.Log("bye.");
+            Inside = false;
         }
     }
 }
