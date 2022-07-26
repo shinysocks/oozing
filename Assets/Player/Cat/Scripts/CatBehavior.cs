@@ -50,7 +50,7 @@ public class CatBehavior : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move();  // there's a new way to do this I think in 2022?? maybe its fine..
+        Move();
     }
 
 
@@ -127,15 +127,6 @@ public class CatBehavior : MonoBehaviour
         }
     }
 
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Enemy")
-        {
-            Gunkiness += 1;
-        }
-    }
-
     void DeathDetection()
     {
         if (Gunkiness > 5)
@@ -143,7 +134,6 @@ public class CatBehavior : MonoBehaviour
             GameOver();
         }
     }
-
 
     public void GameOver()
     {
@@ -167,23 +157,15 @@ public class CatBehavior : MonoBehaviour
             break;
         case 2:
             screenGunks[1].SetActive(true);
-            //gunk_2.SetActive(true);
             break;
         case 3:
             screenGunks[2].SetActive(true);
-            //gunk_3.SetActive(true);
             break;
         case 4:
             screenGunks[3].SetActive(true);
-            //gunk_4.SetActive(true);
             break;
         case 5:
             screenGunks[4].SetActive(true);
-            //gunk_5.SetActive(true);
-            break;
-        default:
-            screenGunks[0].SetActive(false);
-            //AllGunks.SetActive(false);
             break;
         }
     }

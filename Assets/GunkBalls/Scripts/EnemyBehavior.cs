@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBehavior : MonoBehaviour
 {
     public Transform player;
+    public CatBehavior playerScript;
     private Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
     public float moveSpeed = 5;
@@ -15,19 +16,22 @@ public class EnemyBehavior : MonoBehaviour
 
     // Animation
     public List<Sprite> walkingAnimation;
+    public Sprite deathAnimation;
     public float frameRate;
-    bool moving = true;
+    bool alive = true;
 
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        enemyHealth = Random.Range(1, 4);
+        enemyHealth = Random.Range(2, 5);
     }
 
-    void Update() 
+    void FixedUpdate() 
     {
+        if (alive)
+        {
         Animate();
-
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -38,32 +42,27 @@ public class EnemyBehavior : MonoBehaviour
             if (enemyHealth <= 0)
 
             {
-                Destroy(gameObject);
+                alive = false;
+                spriteRenderer.sprite = deathAnimation;
+                Destroy(gameObject, .1f);
             }
         }
 
         if (other.gameObject.tag == "Cat")
         {
+            alive = false;
+            spriteRenderer.sprite = deathAnimation;
             Destroy(gameObject);
-            // pop animation 
+            playerScript.Gunkiness += 1;
         }
     }
     
     void Animate()
     {
-        if (moving) // actually moving? how does this work???
-        {
-            float playTime = Time.time;
-            int totalFrames = (int)(playTime * frameRate);
-            int frame = totalFrames % walkingAnimation.Count; 
+        int totalFrames = (int)(Time.time * frameRate);
+        int frame = totalFrames % walkingAnimation.Count; 
 
-            spriteRenderer.sprite = walkingAnimation[frame];
-        }
-
-        else
-        {
-            spriteRenderer.sprite = walkingAnimation[0];
-        }
+        spriteRenderer.sprite = walkingAnimation[frame];
     }
 
 }

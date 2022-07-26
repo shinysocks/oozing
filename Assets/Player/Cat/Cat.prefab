@@ -59,11 +59,11 @@ MonoBehaviour:
   - {fileID: -483279261, guid: 01f0c926bb1300f268e66bc4b085b9d5, type: 3}
   - {fileID: -614946, guid: 01f0c926bb1300f268e66bc4b085b9d5, type: 3}
   - {fileID: -1637181511, guid: 01f0c926bb1300f268e66bc4b085b9d5, type: 3}
-  healthBar: {fileID: 0}
+  screenGunks: []
   bullet: {fileID: 1050756799967303301, guid: f9bf214ecf27f4bda801fb7fa0c3f50d, type: 3}
   hitEffect: {fileID: 2470272760391178039, guid: 8bf3619c1eeaeed3c8b15c2ff8d5bf86, type: 3}
   UiObject: {fileID: 6787048945311807843, guid: dca3a4d60bb852c4fa5c375951deca5f, type: 3}
-  CannonGunkiness: 0
+  Gunkiness: 0
 --- !u!212 &1582813422209202143
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -280,6 +280,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1582813422209202142}
+    - target: {fileID: 3574227945574760014, guid: 914d2302a79fcd9869e3622467afb769, type: 3}
+      propertyPath: smoothFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3613340512115908088, guid: 914d2302a79fcd9869e3622467afb769, type: 3}
       propertyPath: projectileSpeed
       value: 7
@@ -287,6 +291,14 @@ PrefabInstance:
     - target: {fileID: 6403967285981285507, guid: 914d2302a79fcd9869e3622467afb769, type: 3}
       propertyPath: m_Name
       value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403967285981285534, guid: 914d2302a79fcd9869e3622467afb769, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7250944
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403967285981285534, guid: 914d2302a79fcd9869e3622467afb769, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2688679
       objectReference: {fileID: 0}
     - target: {fileID: 6403967285981285535, guid: 914d2302a79fcd9869e3622467afb769, type: 3}
       propertyPath: m_RootOrder

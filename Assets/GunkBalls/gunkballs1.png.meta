@@ -116,27 +116,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gunkballs1_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1600
-        width: 425
-        height: 400
-      alignment: 9
-      pivot: {x: 0.5623531, y: 0.4526779}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a5b48503dd5d28968b05385b5a642a4
-      internalID: 1987064499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: gunkballs1_1
       rect:
         serializedVersion: 2
