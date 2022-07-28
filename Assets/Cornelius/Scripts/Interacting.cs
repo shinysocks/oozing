@@ -5,23 +5,14 @@ using UnityEngine;
 public class Interacting : MonoBehaviour
 {
     public bool Inside = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public BallShoot ballShootScript;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Cat")
         {
             Inside = true;
+            ballShootScript.canShoot = false;
         }
         
     }
@@ -31,6 +22,7 @@ public class Interacting : MonoBehaviour
         if (other.gameObject.tag == "Cat")
         {
             Inside = false;
+            ballShootScript.canShoot = true;
         }
     }
 }
