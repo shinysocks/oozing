@@ -81,7 +81,7 @@ public class FollowPlayer : MonoBehaviour
     
     void FixedUpdate()
     {
-        if (Mathf.Abs(player.position.x - transform.position.x) <= 8 && Mathf.Abs(player.position.y - transform.position.y) <= 8 ) //probably should normalize
+        if (Mathf.Abs(player.position.x - transform.position.x) <= 40 && Mathf.Abs(player.position.y - transform.position.y) <= 40 ) //probably should normalize
         {
             MoveEnemy(movement); // Actually moves the enemy
         }

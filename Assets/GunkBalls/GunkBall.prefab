@@ -49,8 +49,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  playerScript: {fileID: 0}
   spriteRenderer: {fileID: 1862048011112370505}
-  moveSpeed: 4
+  moveSpeed: 5.5
   enemyPrefab: {fileID: 17960333688480771}
   walkingAnimation:
   - {fileID: 1364201550, guid: e8ae47e0f47958ef9b2406b11bf6acbf, type: 3}
@@ -60,7 +61,7 @@ MonoBehaviour:
   - {fileID: -582028424, guid: e8ae47e0f47958ef9b2406b11bf6acbf, type: 3}
   - {fileID: -2038975690, guid: e8ae47e0f47958ef9b2406b11bf6acbf, type: 3}
   deathAnimation: {fileID: 21300000, guid: 1c0ecf53598e6faaab319c652dc29be9, type: 3}
-  frameRate: 12
+  frameRate: 10
 --- !u!114 &4623640422661222194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  moveSpeed: 4
+  moveSpeed: 7
   aggression: 5
   scale: 1
 --- !u!212 &1862048011112370505
