@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    public Transform player;
     public CatBehavior playerScript;
     private Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
-    public float moveSpeed = 5;
-    private Vector2 movement;
 
-    public GameObject enemyPrefab;
     int enemyHealth = 0;
 
     // Animation
@@ -23,7 +19,7 @@ public class EnemyBehavior : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        enemyHealth = Random.Range(2, 5);
+        enemyHealth = Random.Range(3, 6);
     }
 
     void FixedUpdate() 
@@ -56,7 +52,7 @@ public class EnemyBehavior : MonoBehaviour
             playerScript.Gunkiness += 1;
         }
     }
-    
+
     void Animate()
     {
         int totalFrames = (int)(Time.time * frameRate);

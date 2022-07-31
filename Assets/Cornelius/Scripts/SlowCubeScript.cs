@@ -11,6 +11,7 @@ public class SlowCubeScript : MonoBehaviour
         {
             catScript.walkSpeed -= 2f;
             catScript.frameRate -= 3f;
+            Destroy(gameObject);
         }
         
     }

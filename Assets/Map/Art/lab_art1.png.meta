@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 01f0c926bb1300f268e66bc4b085b9d5
+guid: 8927102aa34703ca9949f9a2f392283a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 160
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,106 +116,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CatWalkN_0
+      name: lab_art1_0
       rect:
         serializedVersion: 2
-        x: 171
-        y: 157
-        width: 233
-        height: 675
+        x: 0
+        y: 668
+        width: 203
+        height: 146
       alignment: 9
-      pivot: {x: 0.49408758, y: 0.6076088}
+      pivot: {x: 0.5225933, y: 0.48115185}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df7548ca35f892b4b88218982b38448e
-      internalID: -1286445241
+      spriteID: 137b3e2d6350fafd992573063dd3addf
+      internalID: -1823231603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatWalkN_1
+      name: lab_art1_1
       rect:
         serializedVersion: 2
-        x: 569
-        y: 152
-        width: 222
-        height: 675
-      alignment: 9
-      pivot: {x: 0.49279565, y: 0.6113605}
+        x: 269
+        y: 664
+        width: 184
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fa11f6626255a16dade6e1e0fbb37d2
-      internalID: 349568483
+      spriteID: 6674f423ca27e65928f511f4657c9036
+      internalID: -653392018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatWalkN_2
+      name: lab_art1_2
       rect:
         serializedVersion: 2
-        x: 953
-        y: 144
-        width: 227
-        height: 671
-      alignment: 9
-      pivot: {x: 0.521137, y: 0.60487396}
+        x: 504
+        y: 656
+        width: 140
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c724bb3cb2e26c88b973d9e53cba18ee
-      internalID: -483279261
+      spriteID: 628c53b2ef4282dc69d920807f8dc152
+      internalID: -973589639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatWalkN_3
+      name: lab_art1_3
       rect:
         serializedVersion: 2
-        x: 1412
-        y: 147
-        width: 222
-        height: 686
-      alignment: 9
-      pivot: {x: 0.50720435, y: 0.6072435}
+        x: 698
+        y: 640
+        width: 114
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dccb037f6736e3e4586aaa9f0c5d69a1
-      internalID: -614946
+      spriteID: a805de0adbf9e6c2b8b5e903f46e683f
+      internalID: -1633919721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatWalkN_4
+      name: lab_art1_4
       rect:
         serializedVersion: 2
-        x: 1850
-        y: 138
-        width: 243
-        height: 689
-      alignment: 9
-      pivot: {x: 0.526327, y: 0.60909784}
+        x: 855
+        y: 663
+        width: 123
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b84d238682f2aa5d695289970b7cc05d
-      internalID: -1637181511
+      spriteID: 5b195293b527ee16ead3c63a2130c176
+      internalID: -286847282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_art1_5
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 379
+        width: 203
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e91a278d64fc062a68c82a2f50f052
+      internalID: -1056754415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_art1_6
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 378
+        width: 366
+        height: 246
+      alignment: 9
+      pivot: {x: 0.42481253, y: 0.55077237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855232b526150c14ea27bb78e77d6cad
+      internalID: -740292686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_art1_9
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 294
+        width: 292
+        height: 337
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8b7b57b30b9cd24b1f61381ff7028a
+      internalID: 1034454529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_art1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 404
+        height: 365
+      alignment: 9
+      pivot: {x: 0.3910154, y: 0.47486886}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8fa906ef4d2b00d8a191438043d6f9
+      internalID: -969891847
       vertices: []
       indices: 
       edges: []
@@ -231,11 +315,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CatWalkN_1: 349568483
-      CatWalkN_0: -1286445241
-      CatWalkN_3: -614946
-      CatWalkN_2: -483279261
-      CatWalkN_4: -1637181511
+      lab_art1_5: -1056754415
+      lab_art1_3: -1633919721
+      lab_art1_2: -973589639
+      lab_art1_10: -969891847
+      lab_art1_8: -876755308
+      lab_art1_4: -286847282
+      lab_art1_11: 626021036
+      lab_art1_0: -1823231603
+      lab_art1_7: -55966115
+      lab_art1_1: -653392018
+      lab_art1_9: 1034454529
+      lab_art1_6: -740292686
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -19,9 +19,4 @@ public class TerrorBehavior : MonoBehaviour
             dialogueStuff.SetActive(false);
         }
     }
-
-    void Slow() 
-    {
-        
-    }
 }

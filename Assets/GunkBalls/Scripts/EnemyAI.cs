@@ -6,7 +6,7 @@ using Pathfinding;
 public class EnemyAI : MonoBehaviour
 {
     public Transform target;
-    public float speed = 500f;
+    public float speed = 7f;
     public float nextWaypointDistance = 3f;
     public float attackRadius = 30;
     Path path;
@@ -43,14 +43,14 @@ public class EnemyAI : MonoBehaviour
         {
             reachedEndOfPath = false;
         }
-
+        
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
+        Vector2 directionWithSpeed = direction * speed;
 
         float playerToEnemyDistance = Vector3.Distance(target.position, rb.position);
         if (playerToEnemyDistance < attackRadius)
         {
-            rb.AddForce(force);
+            rb.velocity = directionWithSpeed;
         }
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);

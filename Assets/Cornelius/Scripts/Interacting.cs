@@ -6,11 +6,19 @@ public class Interacting : MonoBehaviour
 {
     public bool Inside = false;
     public BallShoot ballShootScript;
+    public List<GameObject> screenOoze;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Cat")
         {
+            if (gameObject.name == "TerrorInteraction")
+            {
+                foreach (GameObject Ooze in screenOoze)
+                {
+                    Ooze.SetActive(false);
+                }
+            }
             Inside = true;
             ballShootScript.canShoot = false;
         }

@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public BallShoot ballShootScript;
     public GameObject interactionField;
+    public GameObject terrorInteractionField;
+    
 
     public static bool isPaused = false;
 
@@ -17,13 +19,14 @@ public class PauseMenu : MonoBehaviour
         {
             if (isPaused)
             {
+                terrorInteractionField.SetActive(true);
                 interactionField.SetActive(true);
                 ResumeGame();
             }
 
             else
             {
-
+                terrorInteractionField.SetActive(false);
                 interactionField.SetActive(false);
                 PauseGame();
             }
@@ -45,6 +48,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         ballShootScript.canShoot = true;
         interactionField.SetActive(true);
+        terrorInteractionField.SetActive(true);
     }
 
 
