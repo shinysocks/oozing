@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isPaused)
             {
@@ -58,6 +58,4 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
     }
-
-
 }

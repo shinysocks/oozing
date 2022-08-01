@@ -52,6 +52,6 @@ public class DialogueBehavior : MonoBehaviour
 
     public void LastSentence()
     {
-        SceneManager.LoadScene("Menu"); //credits scene
+        SceneManager.LoadScene("Credits");
     }
 }
