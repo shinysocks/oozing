@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class DialogueBehavior : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
+    public TextMeshProUGUI buttontextDisplay;
     int index = 0;
     public bool isTerror;
     public GameObject normalNextButton;
@@ -30,7 +31,14 @@ public class DialogueBehavior : MonoBehaviour
 
     void Type()
     {
-
+        if (isTerror)
+        {
+            buttontextDisplay.text = (index +1) + "/14";
+        }
+        else
+        {
+            buttontextDisplay.text = (index +1) + "/5";
+        }
         textDisplay.text = "";
         textDisplay.text += sentences[index];
     }
@@ -39,12 +47,29 @@ public class DialogueBehavior : MonoBehaviour
     {
         if (index < sentences.Length - 1)
         {
+            if (isTerror)
+            {
+                buttontextDisplay.text = (index +1) + "/14";
+            }
+            else
+            {
+            buttontextDisplay.text = (index +1) + "/5";
+            }
+
             index++;
             Type();
         }
 
         else
         {
+            if (isTerror)
+            {
+                buttontextDisplay.text = (index +1) + "/14";
+            }
+            else
+            {
+                buttontextDisplay.text = (index +1) + "/5";
+            }
             index = 0;
             Type();
         }

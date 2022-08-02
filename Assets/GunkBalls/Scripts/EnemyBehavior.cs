@@ -19,7 +19,7 @@ public class EnemyBehavior : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        enemyHealth = Random.Range(3, 6);
+        enemyHealth = Random.Range(2, 4);
     }
 
     void FixedUpdate() 
