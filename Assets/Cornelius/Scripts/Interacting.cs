@@ -7,6 +7,7 @@ public class Interacting : MonoBehaviour
     public bool Inside = false;
     public BallShoot ballShootScript;
     public List<GameObject> screenOoze;
+    public AudioManager musicManager;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,6 +19,8 @@ public class Interacting : MonoBehaviour
                 {
                     Ooze.SetActive(false);
                 }
+
+                musicManager.ChangeTrack("DialogueNoise", .3f);
             }
             Inside = true;
             ballShootScript.canShoot = false;

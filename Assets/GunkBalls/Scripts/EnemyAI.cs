@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour
     public float attackRadius = 30;
     Path path;
     int currentWaypoint = 0;
-    bool reachedEndOfPath = false;
+    public bool reachedEndOfPath = false;
     Seeker seeker;
     Rigidbody2D rb;
 
@@ -36,7 +36,7 @@ public class EnemyAI : MonoBehaviour
         if (currentWaypoint >= path.vectorPath.Count)
         {
             reachedEndOfPath = true;
-            return;
+            return; //tomato
         }
 
         else

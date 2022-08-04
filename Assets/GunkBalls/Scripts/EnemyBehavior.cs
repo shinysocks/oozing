@@ -8,6 +8,8 @@ public class EnemyBehavior : MonoBehaviour
     private Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
 
+    public AudioManager musicManager;
+
     int enemyHealth = 0;
 
     // Animation
@@ -19,7 +21,7 @@ public class EnemyBehavior : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        enemyHealth = Random.Range(2, 4);
+        enemyHealth = Random.Range(1, 5);
     }
 
     void FixedUpdate() 
@@ -50,6 +52,7 @@ public class EnemyBehavior : MonoBehaviour
             spriteRenderer.sprite = deathAnimation;
             Destroy(gameObject);
             playerScript.Gunkiness += 1;
+            musicManager.PitchDown();
         }
     }
 
