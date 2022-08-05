@@ -11,6 +11,8 @@ public class BallShoot : MonoBehaviour
     public float fireRate = 0.5f;
     private float nextFire = 0.0f;
     public bool canShoot;
+    public AudioSource source;
+    public AudioClip clip;
 
     void Update()
     {
@@ -19,6 +21,7 @@ public class BallShoot : MonoBehaviour
             nextFire = Time.time + fireRate;
 
             ShootBase();
+            source.PlayOneShot(clip);
         }
     }
 

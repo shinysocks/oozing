@@ -26,7 +26,7 @@ public class BallCollide : MonoBehaviour
         if (multiShot == false)
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 0.2f);
+            Destroy(effect, 0.3f);
             Destroy(gameObject);
         }
     }

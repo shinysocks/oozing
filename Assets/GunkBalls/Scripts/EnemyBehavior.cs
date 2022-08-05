@@ -18,6 +18,10 @@ public class EnemyBehavior : MonoBehaviour
     public float frameRate;
     bool alive = true;
 
+    // Music
+    public AudioSource source;
+    public AudioClip clip;
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -42,7 +46,8 @@ public class EnemyBehavior : MonoBehaviour
             {
                 alive = false;
                 spriteRenderer.sprite = deathAnimation;
-                Destroy(gameObject, .1f);
+                source.PlayOneShot(clip);
+                Destroy(gameObject, .3f);
             }
         }
 
