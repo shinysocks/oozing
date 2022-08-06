@@ -20,7 +20,7 @@ public class Interacting : MonoBehaviour
                     Ooze.SetActive(false);
                 }
 
-                musicManager.ChangeTrack("DialogueNoise", .3f);
+                musicManager.ChangeTrack("DialogueNoise", .2f);
             }
             Inside = true;
             ballShootScript.canShoot = false;

@@ -22,10 +22,13 @@ public class EnemyBehavior : MonoBehaviour
     public AudioSource source;
     public AudioClip clip;
 
+    public AudioSource catSource;
+    public List<AudioClip> meows;
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        enemyHealth = Random.Range(1, 5);
+        enemyHealth = Random.Range(2, 5);
     }
 
     void FixedUpdate() 
@@ -57,6 +60,8 @@ public class EnemyBehavior : MonoBehaviour
             spriteRenderer.sprite = deathAnimation;
             Destroy(gameObject);
             playerScript.Gunkiness += 1;
+            int catSound = Random.Range(0, 4);
+            catSource.PlayOneShot(meows[catSound]);
             musicManager.PitchDown();
         }
     }

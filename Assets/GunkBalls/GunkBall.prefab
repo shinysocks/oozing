@@ -67,6 +67,12 @@ MonoBehaviour:
   frameRate: 10
   source: {fileID: 7109036219137655558}
   clip: {fileID: 8300000, guid: 3bd18dd25ee058b54aff98b97c53360c, type: 3}
+  catSource: {fileID: 0}
+  meows:
+  - {fileID: 8300000, guid: 9345b83dae01cb819bd38cccf6327474, type: 3}
+  - {fileID: 8300000, guid: 22d94eec45ff7263c9d2b8bb91d39a5c, type: 3}
+  - {fileID: 8300000, guid: 305ae4f21e22a9623aa0994ccd6a4584, type: 3}
+  - {fileID: 8300000, guid: 86478621ee1d215edb312d9ed5a2d540, type: 3}
 --- !u!212 &1862048011112370505
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -309,7 +315,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.7
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0

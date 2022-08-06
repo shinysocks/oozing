@@ -66,7 +66,7 @@ public class CatBehavior : MonoBehaviour
     }
 
 
-    void Rotate() //simplify?
+    void Rotate()
     {
         if (directionWithSpeed.x < 0 && directionWithSpeed.y > 0)
         {
